@@ -3,7 +3,10 @@
 @section('content')
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1>All Cute Posts</h1>
-        <a href="{{ route('posts.create') }}" class="btn btn-cute">+ Create New Post</a>
+        <div>
+            <a href="{{ route('posts.create') }}" class="btn btn-cute">+ Create New Post</a>
+            <a href="{{ route('posts.reports.index') }}" class="btn btn-outline-cute">View Reports</a>
+        </div>
     </div>
 
     @if ($message = Session::get('success'))
